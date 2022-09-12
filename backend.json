@@ -1,0 +1,1726 @@
+{
+	"info": {
+		"_postman_id": "50e3c67e-e6dd-49dc-b46b-4ca476d952b4",
+		"name": "RealEstate API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "article",
+					"item": [
+						{
+							"name": "Articles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/article/:sortBy",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"article",
+										":sortBy"
+									],
+									"variable": [
+										{
+											"key": "sortBy",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/article/:sortBy",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"article",
+												":sortBy"
+											],
+											"variable": [
+												{
+													"key": "sortBy"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Show one article",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/article/property/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"article",
+										"property",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/article/property/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"article",
+												"property",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "ArticleDelete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "<Bearer Token>",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/article/delete/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"article",
+										"delete",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/article/delete/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"article",
+												"delete",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "create-article",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjNiODI0YTk5MjU1NTZmMTM1NjRjYWM5MzM2NzE1YTk5NGExODk3MmNiNGJmYWU3ODY5MDk4NGY2MjYxNDMyN2U0NzNiODkzMzVjODE2ZTJkIn0.eyJhdWQiOiIxIiwianRpIjoiM2I4MjRhOTkyNTU1NmYxMzU2NGNhYzkzMzY3MTVhOTk0YTE4OTcyY2I0YmZhZTc4NjkwOTg0ZjYyNjE0MzI3ZTQ3M2I4OTMzNWM4MTZlMmQiLCJpYXQiOjE2NTAwMjA2MTAsIm5iZiI6MTY1MDAyMDYxMCwiZXhwIjoxNjgxNTU2NjEwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.VcmRkg7_tG4jLeVsOu-z9iG1ECwZ3I6kGr35kUg_w9tdxYEnK4-PaIf71761XyzaIgyv_unOdnE0AC6_O6qJHzhi-5OwWiCCoOTyJGm4paeLP4uJxsLBe8YfsIF0Ug0tcSIgy8Wn1OG41DvhRdsgghN3hSk0uBZe8exYpgSDqgrY6endIRLEHMkL2XgFZvFPrR_BCUJcw9VWFPxw88LFW4YeLIlzYXxL0kVDIKpjY0afA3WLx2AXLzfVQccHTgYLx5xI9DLDdccN33hWr_oRJDvaFykAhNm97b0JcOq502KXL7H0P381i7GAJIYdNPSSmiU1rvvCQggafT3IjW9kxD0a8VxFZzQEY2TOdbD-8-oWIVr4wAs0Rn137c_SKijN5YFDL7eMrV3Xt9zMw-OARr9YkQUjtAQv8Ik4q2Fm1dH5pH6l3-w_2sULVCPK_m7exdH4SMxfroU4ZbQDuIvbNBf4XZgvYJ4mPAto8WY0U1JXogSfWrMj7TVrC5hc39_A_hsHb2dE2ptP_jXqlhwbHCNX27mDr1Hb7F1OXwF8ettXN7bElwYHT0gowWDo4m9alVlfTwuWaVild8ezQ6NGZIqln-157MO8PW4kg65V6J0k0P-RZ4YGy7CIRdvzGeL3oOAFBQllKLxf31wMBATQSp0aJPsfv58mzheqBpNLxZo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "test-title",
+											"type": "text"
+										},
+										{
+											"key": "body",
+											"value": "123123",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "gjakove",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "asdfasdf",
+											"type": "text"
+										},
+										{
+											"key": "for",
+											"value": "both",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "1+1",
+											"type": "text"
+										},
+										{
+											"key": "available",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "135-595-444",
+											"type": "text"
+										},
+										{
+											"key": "filenames[]",
+											"type": "file",
+											"src": [
+												"/home/rezart/Documents/Test.jpg",
+												"/home/rezart/Documents/screenshot_7.png"
+											]
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/create-article",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"create-article"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "contact",
+					"item": [
+						{
+							"name": "Admin Delete Contact",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "<Bearer Token>",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/contact/delete/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"contact",
+										"delete",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Delete Contact"
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/contact/delete/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact",
+												"delete",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Admin Show Contact",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "<Bearer Token>",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/contact/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"contact",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Show Contact"
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/contact/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "password",
+							"item": [
+								{
+									"name": "Send Reset Password",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/password/email?email=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"password",
+												"email"
+											],
+											"query": [
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Send Reset password"
+									},
+									"response": [
+										{
+											"name": "success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/auth/password/email?email=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"auth",
+														"password",
+														"email"
+													],
+													"query": [
+														{
+															"key": "email",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										}
+									]
+								},
+								{
+									"name": "Reset Password",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/password/reset/:token?email=<string>&password=<string>&email=<string>&password_confirmation=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"password",
+												"reset",
+												":token"
+											],
+											"query": [
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "password",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "password_confirmation",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											],
+											"variable": [
+												{
+													"key": "token",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Reset Password with token"
+									},
+									"response": [
+										{
+											"name": "success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/auth/password/reset/:token?email=<string>&password=<string>&email=<string>&password_confirmation=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"auth",
+														"password",
+														"reset",
+														":token"
+													],
+													"query": [
+														{
+															"key": "email",
+															"value": "<string>"
+														},
+														{
+															"key": "password",
+															"value": "<string>"
+														},
+														{
+															"key": "email",
+															"value": "<string>"
+														},
+														{
+															"key": "password_confirmation",
+															"value": "<string>"
+														}
+													],
+													"variable": [
+														{
+															"key": "token"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/login?email=<string>&password=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "<string>",
+											"description": "(Required) "
+										},
+										{
+											"key": "password",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/login?email=<string>&password=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"login"
+											],
+											"query": [
+												{
+													"key": "email",
+													"value": "<string>"
+												},
+												{
+													"key": "password",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"\""
+								},
+								{
+									"name": "not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/login?email=<string>&password=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"login"
+											],
+											"query": [
+												{
+													"key": "email",
+													"value": "<string>"
+												},
+												{
+													"key": "password",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Invalid request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/login?email=<string>&password=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"login"
+											],
+											"query": [
+												{
+													"key": "email",
+													"value": "<string>"
+												},
+												{
+													"key": "password",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/login?email=<string>&password=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"login"
+											],
+											"query": [
+												{
+													"key": "email",
+													"value": "<string>"
+												},
+												{
+													"key": "password",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/register?name=<string>&email=<string>&password=<string>&password_confirmation=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "<string>",
+											"description": "(Required) "
+										},
+										{
+											"key": "email",
+											"value": "<string>",
+											"description": "(Required) "
+										},
+										{
+											"key": "password",
+											"value": "<string>",
+											"description": "(Required) "
+										},
+										{
+											"key": "password_confirmation",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/register?name=<string>&email=<string>&password=<string>&password_confirmation=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"register"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>"
+												},
+												{
+													"key": "email",
+													"value": "<string>"
+												},
+												{
+													"key": "password",
+													"value": "<string>"
+												},
+												{
+													"key": "password_confirmation",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Invalid request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/register?name=<string>&email=<string>&password=<string>&password_confirmation=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"register"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>"
+												},
+												{
+													"key": "email",
+													"value": "<string>"
+												},
+												{
+													"key": "password",
+													"value": "<string>"
+												},
+												{
+													"key": "password_confirmation",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/register?name=<string>&email=<string>&password=<string>&password_confirmation=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"register"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>"
+												},
+												{
+													"key": "email",
+													"value": "<string>"
+												},
+												{
+													"key": "password",
+													"value": "<string>"
+												},
+												{
+													"key": "password_confirmation",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/register?name=<string>&email=<string>&password=<string>&password_confirmation=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"register"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>"
+												},
+												{
+													"key": "email",
+													"value": "<string>"
+												},
+												{
+													"key": "password",
+													"value": "<string>"
+												},
+												{
+													"key": "password_confirmation",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"\""
+								}
+							]
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "<Bearer Token>",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/logout",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"logout"
+									]
+								},
+								"description": "Logs user out(revokes token)"
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/logout",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"logout"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Aboutus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/aboutus",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"aboutus"
+							]
+						},
+						"description": "Aboutus"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/aboutus",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"aboutus"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				},
+				{
+					"name": "Admin Aboutus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<Bearer Token>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/about-us",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"about-us"
+							]
+						},
+						"description": "Admin Aboutus"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/about-us",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"about-us"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				},
+				{
+					"name": "Admin Update Aboutus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<Bearer Token>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/update/about-us?title=<string>&body=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"update",
+								"about-us"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "<string>",
+									"description": "(Required) "
+								},
+								{
+									"key": "body",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Update Aboutus"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/update/about-us?title=<string>&body=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"update",
+										"about-us"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "<string>"
+										},
+										{
+											"key": "body",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/search?price_from=<integer>&price_to=<integer>&offer_types=<string>&city=<string>&type=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"search"
+							],
+							"query": [
+								{
+									"key": "price_from",
+									"value": "<integer>"
+								},
+								{
+									"key": "price_to",
+									"value": "<integer>"
+								},
+								{
+									"key": "offer_types",
+									"value": "<string>"
+								},
+								{
+									"key": "city",
+									"value": "<string>"
+								},
+								{
+									"key": "type",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/search?price_from=<integer>&price_to=<integer>&offer_types=<string>&city=<string>&type=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"search"
+									],
+									"query": [
+										{
+											"key": "price_from",
+											"value": "<integer>"
+										},
+										{
+											"key": "price_to",
+											"value": "<integer>"
+										},
+										{
+											"key": "offer_types",
+											"value": "<string>"
+										},
+										{
+											"key": "city",
+											"value": "<string>"
+										},
+										{
+											"key": "type",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				},
+				{
+					"name": "Articles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<Bearer Token>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/articles",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"articles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/articles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"articles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				},
+				{
+					"name": "ArticleInfo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<Bearer Token>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/property/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"property",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "<integer>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/property/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"property",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				},
+				{
+					"name": "Contactus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/contactus?name=<string>&email=<string>&subject=<string>&content=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"contactus"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "<string>",
+									"description": "(Required) "
+								},
+								{
+									"key": "email",
+									"value": "<string>",
+									"description": "(Required) "
+								},
+								{
+									"key": "subject",
+									"value": "<string>",
+									"description": "(Required) "
+								},
+								{
+									"key": "content",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Contactus"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/contactus?name=<string>&email=<string>&subject=<string>&content=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"contactus"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "<string>"
+										},
+										{
+											"key": "email",
+											"value": "<string>"
+										},
+										{
+											"key": "subject",
+											"value": "<string>"
+										},
+										{
+											"key": "content",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				},
+				{
+					"name": "Admin Contactus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<Bearer Token>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/contact-us",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"contact-us"
+							]
+						},
+						"description": "Admin Contactus"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/contact-us",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"contact-us"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}
